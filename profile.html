@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>Website Media Sosial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <img src="banner.png" alt="Banner Website">
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="home.png" alt="Home" class="nav-icon">
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <img src="profile.png" alt="Profil" class="nav-icon">
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="medsos.html">
+                    <img src="Realitas (1).png" alt="Medsos" class="nav-icon">
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="medsos.html#Pengertian">Pengertian</a></li>
+                    <li><a href="medsos.html#Contoh">Contoh</a></li>
+                    <li><a href="medsos.html#Manfaat">Manfaat dan Tujuan</a></li>
+                    <li><a href="medsos.html#Dampak">Dampak Positif </a></li>
+                </ul>
+            </li>
+
+                      <li class="dropdown">
+                <a href="jejak.html">
+                    <img src="jejak dunia (1).png" alt="jejak" class="nav-icon">
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="jejak.html#Negatif">Dampak Negatif</a></li>
+                    <li><a href="jejak.html#Penyebab">Penyebab</a></li>
+                    <li><a href="jejak.html#Cara">Cara Menggunakan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sumber.html">
+                    <img src="12.png" alt="sumber" class="nav-icon">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+
+    <div class="main-wrapper">
+        <div class="envelope-container" id="envContainer" onclick="openProfile()">
+            <div class="envelope">
+                <div class="front-cover">
+                    <div class="seal">💌</div>
+                    <p>Klik untuk membuka profil</p>
+                </div>
+                <div class="back-paper"></div>
+            </div>
+        </div>
+<div class="profile-card" id="profileCard">
+    <div class="profile-header">
+        <div class="photo-frame">
+            <img src="unnamed (1).jpg" alt="Nella Photo">
+        </div>
+        <div class="profile-box">
+            <div class="title-section">
+                <h2 class="sub-title">Tentang Saya</h2>
+                <h1 class="main-name">Donna Immanuella</h1>
+                <p class="class-info">Kelas IX-5 / 18</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-box">
+        <div class="box-header">
+            <span>✨</span> Alasan Membuat Website Ini
+        </div>
+        <p class="box-text">
+            Website ini dibuat sebagai salah satu bentuk pemenuhan tugas akhir sekaligus sebagai media untuk menyampaikan informasi mengenai penggunaan media sosial. Melalui website ini, saya ingin menjelaskan berbagai hal yang berkaitan dengan media sosial, seperti pengertian, tujuan, manfaat, serta dampak yang ditimbulkan dalam kehidupan sehari-hari. Selain itu, pembuatan website ini juga bertujuan untuk melatih kemampuan dalam mengolah informasi dan memanfaatkan teknologi digital sebagai sarana penyampaian pengetahuan kepada pembaca sekaliam. Dengan adanya website ini, diharapkan untuk dapat memahami penggunaan media sosial dengan lebih baik dan bijak. </p>
+    </div>
+</div>
+
+    <div class="footer-spacer"></div>
+
+    <script>
+        function openProfile() {
+            const env = document.getElementById('envContainer');
+            const card = document.getElementById('profileCard');
+            
+            // Animasi buka dan hilang
+            env.classList.add('opened');
+            
+            setTimeout(() => {
+                env.style.display = 'none';
+                card.classList.add('active');
+                // Scroll otomatis ke kartu profil agar pas di layar
+                card.scrollIntoView({ behavior: 'smooth' });
+            }, 800);
+        }
+    </script>
+</body>
+</html>
